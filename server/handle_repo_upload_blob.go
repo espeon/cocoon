@@ -12,7 +12,7 @@ import (
 )
 
 const (
-	blockSize = 0x10000
+	BlockSize = 0x10000
 )
 
 type ComAtprotoRepoUploadBlobResponse struct {
@@ -78,7 +78,7 @@ func (s *Server) handleRepoUploadBlob(e echo.Context) error {
 		}
 		part++
 
-		if n < blockSize {
+		if n < BlockSize {
 			break
 		}
 	}
